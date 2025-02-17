@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Profile Page</title>
+    </head>
+    <body>
+        <h1>Welcome to your Profile!</h1>
+
+        <p>Here are your details:</p>
+        <ul>
+            <li><strong>ID:</strong> <span th:text="${id}"></span></li>
+            <li><strong>Login:</strong> <span th:text="${login}"></span></li>
+            <li><strong>Name:</strong> <span th:text="${name}"></span></li>
+            <li><strong>Email:</strong> <span th:text="${email}"></span></li>
+        </ul>
+
+        <a href="/public">Go to Public Page</a>
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </body>
+</html>
